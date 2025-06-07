@@ -1,0 +1,18 @@
+/*
+layout for personal website
+*/
+
+html {
+    background-color: #a95c5c;
+}
+
+/* universal font for site */
+*{
+    font-family:'Times New Roman', Times, serif;
+    color:#330033;
+    
+}
+
+title {
+    text-align: center;
+}
