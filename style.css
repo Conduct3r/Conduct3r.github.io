@@ -3,16 +3,13 @@ layout for personal website
 */
 
 html {
-    background-color: #a95c5c;
+    background-color: #610a0a;
 }
 
 /* universal font for site */
 *{
     font-family:'Times New Roman', Times, serif;
-    color:#330033;
+    color:#fcac2b;
     
 }
 
-title {
-    text-align: center;
-}
