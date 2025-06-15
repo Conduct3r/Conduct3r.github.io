@@ -2,74 +2,136 @@
 layout for personal website
 */
 html {
-  background-color: #252525;
+  background-color: #ffffe4; /* off-white */
 }
 
 /* universal settings for entire site */
 * {
-  font-family: "Times New Roman", Times, serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-.webpage_banner {
-  /* The image used -> #83b6f2; hex banner color */
-  background-image: url("/images/webpage_banner.png");
+/* flash animation */
+@keyframes flash {
 
-  min-height: 90px;
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  /* Needed to position the navbar */
-  position: relative;
 }
 
-/* Position the navbar container inside the image */
-.container {
-  float: right;
-  margin: 20px;
-  width: auto;
+.flash {
+  animation: flash 2s linear infinite;
 }
 
-/* The navbar */
-.topnav {
-  background-color: #252525; 
+.topleftcontent{
+  top: 12px;
+  left: 20px;
 }
 
-/* Navbar links */
-.topnav a {
-  float: right;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration:none;
-  font-size: 16px;
+.banner-volcano {
+  display: none;
 }
 
-.topnav a:hover {
-  background-color: #ffffff;
+/* mobile mode */
+.mobile-name {
+  display: block;
+}
+
+.desktop-name {
+  display: none;
+}
+
+/* Desktop styles (default) */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: left;
+}  
+        
+.social-icon {
+  text-decoration: none;
+  border: 0;
+  width: 28px; 
+  height: 28px; 
+  padding: 2px;
+  margin: 3px; 
+  color: #ffffe4;
+  border-radius: 50%;
+  background-color: #e4000f;
+  }      
+
+.social-icon svg {
+display: block;
+fill: currentColor;
+width: 100%;
+height: 100%;
+}
+
+.main-container {
+  padding: 12px;
   color: #252525;
-  border-radius: 35px;
+  font-size: 12px;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  line-height: 1.5;
+  hyphens: auto;
+}
+.main-container .pfp {
+  border-radius: 70%;
+  top: 12px;
+  left: 20px;
+}
+
+/* Better mobile text handling */
+.main-container p, 
+.main-container li {
+  margin-bottom: 10px;
+}
+
+/* desktop mode */
+@media (min-width: 768px) {
+  .banner-volcano {
+  display: block;
+  padding-bottom: 20px; /* This leave space below banner photo */
+}
+  .topleftcontent{
+    position:absolute;
+    top: 12px;
+    left: 20px;
+    z-index: 2;
+  }
+  .mobile-name {
+    display: none;
+  }
+
+  .desktop-name {
+    display:block;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    margin: 5px;
+  }
+
+  .main-container{
+    padding: 20px 0px 0px; /* top, left-right, bottom */
+    font-size: 20px;
+    margin:0;
+  }
+
+  .main-container .pfp {
+    display: none; 
+  }
 }
 
 mark {
-  background-color: #ac4aed;
-}
-
-article {
-  flex: 1;
-  width: 80%;
-  float: left;
-  border-style: solid;
-  border-color: #f42222;
-  background-color: aliceblue;
-  color: #252525;
-  font-size: 16px;
-  width: 100%;
-  height: 275px;
+  background-color: #e4000f;
 }
